@@ -19,6 +19,7 @@ Route::get('/home', [HomeController::class, 'redirect']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/add_doctor_view', [AdminController::class, 'add_doctor_view']);
 Route::post('/upload_doctor', [AdminController::class, 'upload_doctor']);
+Route::post('/appointment', [HomeController::class, 'appointment']);
 
 Route::middleware([
     'auth:sanctum',

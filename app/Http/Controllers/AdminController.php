@@ -23,7 +23,7 @@ class AdminController extends Controller
       $doctor->roomnumber = $request->roomnumber;
       $doctor->image = $imagename;
       $doctor->save();
-      return redirect()->back();
+      return redirect()->back()->with('message', 'Doctor Added Succesfully');
 
     }
 }
